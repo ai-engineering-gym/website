@@ -1,5 +1,9 @@
 # AI Engineering Gym — site config (Hextra theme, git-submodule approach)
-baseURL: "https://ai-engineering-gym.com/"
+# NOTE: while the site is served from GitHub Pages as a project site, baseURL must
+# carry the /website/ path prefix (repo name) or all asset links 404.
+# Once ai-engineering-gym.com is registered + set as custom domain in Pages settings,
+# switch this back to "https://ai-engineering-gym.com/" (custom domains serve at root).
+baseURL: "https://ai-engineering-gym.github.io/website/"
 title: "AI Engineering Gym"
 
 enableRobotsTXT: true
