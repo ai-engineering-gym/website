@@ -1,0 +1,103 @@
+# AI Engineering Gym — site config (Hextra theme, git-submodule approach)
+baseURL: "https://ai-engineering-gym.com/"
+title: "AI Engineering Gym"
+
+enableRobotsTXT: true
+hasCJKLanguage: false
+
+# Hextra is added as a git submodule in themes/hextra (no Go / Hugo Modules needed)
+theme: hextra
+
+markup:
+  highlight:
+    noClasses: false
+  goldmark:
+    renderer:
+      unsafe: true
+    extensions:
+      # TeX / KaTeX passthrough ($$...$$, \(...\), \[...\])
+      passthrough:
+        delimiters:
+          block: [['\\[', '\\]'], ['$$', '$$']]
+          inline: [['\\(', '\\)']]
+        enable: true
+
+enableInlineShortcodes: true
+
+menu:
+  main:
+    - identifier: home
+      name: Home
+      pageRef: /
+      weight: 1
+    - identifier: positioning
+      name: Positioning
+      pageRef: /positioning
+      weight: 2
+    - identifier: benchmarks
+      name: Benchmarks
+      pageRef: /benchmarks
+      weight: 3
+    - identifier: university
+      name: University
+      pageRef: /university
+      weight: 4
+    - identifier: blog
+      name: Blog
+      pageRef: /blog
+      weight: 5
+    - name: Search
+      weight: 6
+      params:
+        type: search
+    - name: GitHub
+      weight: 7
+      url: "https://github.com/ai-engineering-gym"
+      params:
+        icon: github
+
+params:
+  description: "We ship evidence, not just geometry. An open training ground where autonomous engineering agents learn to design, validate, and sign off real CAD parts."
+  externalLinkDecoration: true
+
+  # Single source of truth for all contact CTAs (footer, page callouts).
+  # Domain ai-engineering-gym.com must be registered + mail forwarding set up
+  # (e.g. registrar forward or Zoho free tier) before this address bounces.
+  contact:
+    email: "hello@ai-engineering-gym.com"
+
+  navbar:
+    displayTitle: true
+    width: wide
+
+  theme:
+    # light | dark | system — flip to "dark" for a stronger technical identity
+    default: system
+    displayToggle: true
+
+  footer:
+    enable: true
+    displayCopyright: true
+    displayPoweredBy: false
+
+  search:
+    enable: true
+    type: flexsearch
+
+  blog:
+    list:
+      displayTags: true
+      sortBy: date
+      sortOrder: desc
+      pagerSize: 20
+
+  highlight:
+    copy:
+      enable: true
+      display: hover
+
+  imageZoom:
+    enable: true
+
+  comments:
+    enable: false

@@ -1,0 +1,5 @@
+# Hugo build output (generated — do not commit)
+public/
+resources/_gen/
+.hugo_build.lock
+

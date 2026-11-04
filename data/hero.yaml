@@ -1,0 +1,10 @@
+# Home-page hero copy (rendered by layouts/index.html over the wireframe background).
+badge: "EU AI Act ready"
+subtitle_html: "<strong>Secure. Explainable. Auditable.</strong> An open training ground where autonomous agents learn real mechanical design — with the full audit trail on every output."
+buttons:
+  - text: "Explore the positioning"
+    url: "/positioning/"
+    primary: true
+  - text: "See the benchmarks"
+    url: "/benchmarks/"
+    primary: false

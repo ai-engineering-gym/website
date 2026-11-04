@@ -1,0 +1,69 @@
+{{ define "main" }}
+<!-- Full-bleed atmospheric hero: wireframe background + frosted-glass text panel.
+     Light mode  -> image inverted (bright bg) + dark text
+     Dark mode   -> original dark image + white text  (.dark on <html>) -->
+<section class="hextra-hero-flair hx:relative hx:overflow-hidden">
+  <style>
+    .hextra-hero-flair{background:#eef2f7}
+    .dark .hextra-hero-flair{background:#0a1428}
+
+    /* Wireframe: invert to a bright ground in light mode, original in dark */
+    .hextra-hero-flair .hextra-hero-img{filter:invert(1) hue-rotate(180deg);opacity:.92}
+    .dark .hextra-hero-flair .hextra-hero-img{filter:none;opacity:1}
+
+    /* Subtle depth vignette (theme-aware) */
+    .hextra-hero-flair .hextra-hero-vignette{background:radial-gradient(120% 90% at 50% 30%,transparent 40%,rgba(2,6,18,.28) 100%)}
+    .dark .hextra-hero-flair .hextra-hero-vignette{background:radial-gradient(120% 90% at 50% 30%,transparent 45%,rgba(2,6,18,.5) 100%)}
+
+    /* Frosted-glass panel behind the copy (Milchglas) */
+    .hextra-hero-flair .hextra-hero-copy{
+      backdrop-filter:blur(9px) saturate(1.2);
+      -webkit-backdrop-filter:blur(9px) saturate(1.2);
+      background:rgba(255,255,255,.48);
+      color:#0f172a;
+    }
+    .dark .hextra-hero-flair .hextra-hero-copy{
+      background:rgba(10,20,40,.45);
+      color:#f8fafc;
+    }
+
+    /* Consistent copy colors: dark in light mode, white in dark (inherit from panel) */
+    .hextra-hero-flair .hextra-hero-copy h1{color:inherit}
+    .hextra-hero-flair .hextra-hero-badge{color:currentColor;border-color:currentColor}
+    .hextra-hero-flair .hextra-hero-sub{color:inherit;opacity:.82}
+    /* Ghost button follows the panel text color; primary CTA stays blue in both modes */
+    .hextra-hero-flair .hextra-btn-ghost{color:currentColor;border-color:currentColor;background:transparent}
+    .hextra-hero-flair .hextra-btn-ghost:hover{background:rgba(127,127,127,.14)}
+  </style>
+
+  <img src="{{ "images/hero-wireframe.jpg" | relURL }}" alt="" aria-hidden="true"
+       class="hextra-hero-img hx:absolute hx:inset-0 hx:h-full hx:w-full hx:object-cover hx:object-center">
+  <div class="hextra-hero-vignette hx:absolute hx:inset-0"></div>
+
+  <div class="hx:relative hx:mx-auto hx:w-full hextra-max-content-width hx:px-6 hx:py-20 md:hextra-py-28">
+    <div class="hextra-hero-copy hx:mx-auto hx:max-w-4xl hx:rounded-[1.75rem] hx:px-8 hx:py-14 hx:text-center md:hextra-px-14">
+      <h1 class="hx:mx-auto hx:max-w-3xl hx:text-4xl hx:font-bold hx:tracking-tight md:hextra-text-5xl">{{ .Title }}</h1>
+      {{ $hero := (partial "utils/hugo-compat/site-data.html" .).hero }}
+      {{ with $hero }}
+        <div class="hx:mt-6">
+          <span class="hextra-hero-badge not-prose hx:inline-flex hx:items-center hx:rounded-full hx:border hx:px-3 hx:py-1 hx:text-xs hx:font-medium">{{ .badge }}</span>
+        </div>
+        <p class="hextra-hero-sub hx:mx-auto hx:mt-5 hx:max-w-2xl hx:text-lg hx:leading-relaxed md:hextra-text-xl">{{ .subtitle_html | safeHTML }}</p>
+        <div class="hx:mt-9 hx:flex hx:flex-wrap hx:items-center hx:justify-center hx:gap-4">
+          {{ range .buttons }}
+            <a href="{{ .url | relURL }}" class="not-prose hx:rounded-full hx:px-6 hx:py-3 hx:text-center hx:font-medium hx:transition-all {{ if .primary }}hextra-btn-primary hx:bg-primary-600 hx:text-white hx:hover:bg-primary-700{{ else }}hextra-btn-ghost hx:border{{ end }}">{{ .text }}</a>
+          {{ end }}
+        </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+<!-- Body (normal page background): mirrors Hextra's home.html content box -->
+<div class="hx:mx-auto hx:flex hextra-max-page-width">
+  {{ partial "sidebar.html" (dict "context" . "disableSidebar" true) }}
+  <main id="content" class="hx:w-full hx:break-words hx:min-w-0 hextra-max-content-width hx:px-6 hx:py-12 hx:md:px-12">
+    <div class="content">{{ .Content }}</div>
+  </main>
+</div>
+{{ end }}

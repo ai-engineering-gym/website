@@ -1,0 +1,5 @@
+{{- $email := site.Params.contact.email -}}
+<div class="hx:flex hx:items-center hx:justify-between hx:gap-4 hx:py-6">
+  <div class="hx:text-sm">We ship evidence, not just geometry.</div>
+  {{- with $email }}<a href="mailto:{{ . }}" class="hx:text-sm hx:hover:underline">{{ . }}</a>{{ end -}}
+</div>
