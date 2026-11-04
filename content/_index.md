@@ -31,6 +31,8 @@ Two forces are converging on engineering teams:
 - **Cost pressure.** Design cycle time is a cost center. AI that drafts the first 80% of a part changes the math — *if* you can trust what it produces. The open question was never "can a model generate geometry?" but "who verifies it, and can you prove it?"
 - **Compliance.** The EU AI Act's transparency duties have applied since August 2026, and the high-risk obligations land in December 2027 and August 2028. Teams that can *show* their AI design process is controlled, logged and auditable will have an edge — the boring documentation work is now a differentiator. [The compliance window, explained]({{ relref "/blog/2026-10-17-compliance-window/" }}).
 
+The open-source Gym is associated with [Open-Machines e.V.](https://www.open-machines.org/) — a registered association providing tools and platforms for self-organizing, interdisciplinary teams.
+
 {{< hextra/hero-section heading="h3" >}}Two ways in{{< /hextra/hero-section >}}
 
 {{< hextra/feature-grid cols="2" >}}
