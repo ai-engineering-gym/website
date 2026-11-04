@@ -39,4 +39,4 @@ Three practical consequences:
 
 The window is open: **2 Dec 2027** for standalone high-risk, **2 Aug 2028** for embedded. That's not "someday" — it's the next two budget cycles. The teams that treat provenance as a product feature, not an afterthought, will be the ones regulators and customers trust when the dates arrive.
 
-*The Gym is built audit-first for exactly this reason — [see how it works](/positioning/).*
+*The Gym is built audit-first for exactly this reason — [see how it works]({{ relref "/positioning/" }}).*

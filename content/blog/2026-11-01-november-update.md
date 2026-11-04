@@ -5,7 +5,7 @@ date: 2026-11-01T09:00:00+01:00
 tags: ["announcement", "benchmark"]
 ---
 
-Milestone M0 — brand, website, newsletter, first market poll — closed on October 31. The public site shipped with four pages: the landing page, [positioning](/positioning/), the [benchmark method](/benchmarks/) and the [university program](/university/), plus this blog. What's deliberately *not* on it yet: published benchmark results (M2) and pricing ("we publish pricing at launch, not before").
+Milestone M0 — brand, website, newsletter, first market poll — closed on October 31. The public site shipped with four pages: the landing page, [positioning]({{ relref "/positioning/" }}), the [benchmark method]({{ relref "/benchmarks/" }}) and the [university program]({{ relref "/university/" }}), plus this blog. What's deliberately *not* on it yet: published benchmark results (M2) and pricing ("we publish pricing at launch, not before").
 
 Since the site went up, the engineering side has been moving. Three things worth knowing:
 

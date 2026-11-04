@@ -14,7 +14,7 @@ OEMs and Tier-1 suppliers face a choice: hand their design data to a black-box A
 - **Your models, your sign-off.** Bring your own LLM; the Gym provides the training loop and the evidence.
 - **Compliance-ready.** Every output carries its audit trail — the provenance a regulator or customer will ask for.
 
-The window is real: as EU AI Act obligations phase in (high-risk duties land **2 Dec 2027** and **2 Aug 2028**), the teams that can *show* their AI design process is controlled and auditable will have an edge. [What the timeline actually means](/blog/2026-10-17-compliance-window/).
+The window is real: as EU AI Act obligations phase in (high-risk duties land **2 Dec 2027** and **2 Aug 2028**), the teams that can *show* their AI design process is controlled and auditable will have an edge. [What the timeline actually means]({{ relref "/blog/2026-10-17-compliance-window/" }}).
 
 ## Story B — Training ground (for research)
 
@@ -53,6 +53,6 @@ The open-core engine ships at launch; the benchmark index (v0.1) is in developme
 Free for students and open-source contributors at launch. Paid tiers (hosted runs, evolved prompt packs, enterprise) will be announced when they're real — we publish pricing at launch, not before.
 
 **Is the Gym EU AI Act compliant?**
-The Gym itself is a minimal-risk system under the Act — it's neither an Annex I product nor in any Annex III domain. It is built audit-first because *your downstream use* matters: the provenance, logging and human-in-the-loop review map one-to-one onto the Act's high-risk requirements. [The full timeline, with dates](/blog/2026-10-17-compliance-window/).
+The Gym itself is a minimal-risk system under the Act — it's neither an Annex I product nor in any Annex III domain. It is built audit-first because *your downstream use* matters: the provenance, logging and human-in-the-loop review map one-to-one onto the Act's high-risk requirements. [The full timeline, with dates]({{ relref "/blog/2026-10-17-compliance-window/" }}).
 
 {{< contact-cta >}}
